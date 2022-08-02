@@ -1,0 +1,15 @@
+Package: sosRus
+Title: Tools to Assist Not for Profit Analysts with Data Wrangling
+Version: 0.0.0.9000
+Authors@R: 
+    person("Zach", "Timpe", , "zacharytimpe@gmail.com", role = c("aut", "cre"))
+Description: This package provides a set of functions designed to assist 
+    youth-focused organizations in wrangling programmatic and participant-level 
+    data. Collectively, the functions in this package provide analysts with 
+    tools to improve research and evaluation practices relying on the 
+    data-to-dissemination pipeline.
+License: `use_mit_license()`, `use_gpl3_license()` or friends to pick a
+    license
+Encoding: UTF-8
+Roxygen: list(markdown = TRUE)
+RoxygenNote: 7.2.1
