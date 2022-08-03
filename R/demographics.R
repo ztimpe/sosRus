@@ -1,3 +1,10 @@
+#' Vector of participant ID fields
+#'
+#' @return a character vector of field names useful for API calls
+#' @export
+#'
+#' @examples
+#' demographics()
 demographics <- function(){
   c("civiCoreParticipantID",
   "lastName",
