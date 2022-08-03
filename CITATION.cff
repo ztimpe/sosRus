@@ -1,0 +1,46 @@
+# -----------------------------------------------------------
+# CITATION file created with {cffr} R package, v0.2.2
+# See also: https://docs.ropensci.org/cffr/
+# -----------------------------------------------------------
+ 
+cff-version: 1.2.0
+message: 'To cite package "sosRus" in publications use:'
+type: software
+license: MIT
+title: 'sosRus: Tools to Assist Not for Profit Analysts with Data Wrangling'
+version: 0.0.0.9000
+abstract: This package provides a set of functions designed to assist youth-focused
+  organizations in wrangling programmatic and participant-level data. Collectively,
+  the functions in this package provide analysts with tools to improve research and
+  evaluation practices by streamlining certain parts of the raw-to-analysis data pipeline.
+authors:
+- family-names: Timpe
+  given-names: Zach
+  email: zacharytimpe@gmail.com
+preferred-citation:
+  type: manual
+  title: 'sosRus: Tools to Assist Not for Profit Analysts with Data Wrangling'
+  authors:
+  - family-names: Timpe
+    given-names: Zach
+    email: zacharytimpe@gmail.com
+  version: 0.0.0.9000
+  abstract: This package provides a set of functions designed to assist youth-focused
+    organizations in wrangling programmatic and participant-level data. Collectively,
+    the functions in this package provide analysts with tools to improve research
+    and evaluation practices by streamlining certain parts of the raw-to-analysis
+    data pipeline.
+  repository-code: https://github.com/ztimpe/sosRus
+  url: https://github.com/ztimpe/sosRus
+  contact:
+  - family-names: Timpe
+    given-names: Zach
+    email: zacharytimpe@gmail.com
+  license: MIT
+  year: '2022'
+repository-code: https://github.com/ztimpe/sosRus
+url: https://github.com/ztimpe/sosRus
+contact:
+- family-names: Timpe
+  given-names: Zach
+  email: zacharytimpe@gmail.com
