@@ -1,0 +1,25 @@
+---
+title: "sosRus"
+output: rmarkdown::html_vignette
+vignette: >
+  %\VignetteIndexEntry{sosRus}
+  %\VignetteEngine{knitr::rmarkdown}
+  %\VignetteEncoding{UTF-8}
+---
+
+```{r, include = FALSE}
+knitr::opts_chunk$set(
+  collapse = TRUE,
+  comment = "#>"
+)
+```
+
+```{r setup}
+library(sosRus)
+library(stringr)
+```
+
+```{r field_names}
+demo_names <- demographics()
+bracketize(demo_names)
+```
