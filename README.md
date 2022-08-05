@@ -3,6 +3,8 @@
 
 # sosRus
 
+# sosRus <a href="https://ztimpe.github.io/sosRus/"><img src="man/figures/logo.jpg" align="right" height="134" /></a>
+
 <!-- badges: start -->
 
 [![R-CMD-check](https://github.com/ztimpe/sosRus/actions/workflows/R-CMD-check.yaml/badge.svg)](https://github.com/ztimpe/sosRus/actions/workflows/R-CMD-check.yaml)

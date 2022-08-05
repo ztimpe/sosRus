@@ -12,6 +12,7 @@ This package provides a set of functions designed to assist youth-focused organi
 Useful links:
 \itemize{
   \item \url{https://github.com/ztimpe/sosRus}
+  \item \url{https://ztimpe.github.io/sosRus/}
   \item Report bugs at \url{https://github.com/ztimpe/sosRus/issues}
 }
 

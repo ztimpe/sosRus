@@ -18,8 +18,13 @@ knitr::opts_chunk$set(
 library(sosRus)
 library(stringr)
 ```
-
+sosRus includes simple calls to load character vectors of commonly used field names
 ```{r field_names}
 demo_names <- demographics()
+demo_names
+```
+You can "bracketize" these character vectors, which results in a vector ready 
+to be plugged into an API call.
+```{r}
 bracketize(demo_names)
 ```
