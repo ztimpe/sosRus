@@ -1,8 +1,6 @@
 
 <!-- README.md is generated from README.Rmd. Please edit that file -->
 
-# sosRus
-
 # sosRus <a href="https://ztimpe.github.io/sosRus/"><img src="man/figures/logo.png" align="right" height="139" /></a>
 
 <!-- badges: start -->
