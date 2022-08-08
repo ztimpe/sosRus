@@ -3,7 +3,7 @@
 
 # sosRus
 
-# sosRus <a href="https://ztimpe.github.io/sosRus/"><img src="man/figures/logo.jpg" align="right" height="134" /></a>
+# sosRus <a href="https://ztimpe.github.io/sosRus/"><img src="man/figures/logo.png" align="right" height="139" /></a>
 
 <!-- badges: start -->
 

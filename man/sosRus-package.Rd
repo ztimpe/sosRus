@@ -6,6 +6,8 @@
 \alias{sosRus-package}
 \title{sosRus: Tools to Assist Not for Profit Analysts with Data Wrangling}
 \description{
+\if{html}{\figure{logo.png}{options: style='float: right' alt='logo' width='120'}}
+
 This package provides a set of functions designed to assist youth-focused organizations in wrangling programmatic and participant-level data. Collectively, the functions in this package provide analysts with tools to improve research and evaluation practices by streamlining certain parts of the raw-to-analysis data pipeline.
 }
 \seealso{
