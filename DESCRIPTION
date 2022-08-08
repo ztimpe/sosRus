@@ -1,5 +1,5 @@
 Package: sosRus
-Title: Tools to Assist Not for Profit Analysts with Data Wrangling
+Title: Tools to Assist Youth-Serving Organizations with Data Wrangling
 Version: 0.0.0.9000
 Authors@R: 
     person("Zach", "Timpe", , "zacharytimpe@gmail.com", role = c("aut", "cre"))
