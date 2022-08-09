@@ -1,0 +1,14 @@
+#' Load list of field tables and names to be pulled from SOS's API
+#'
+#' @return list of character vectors
+#' @export
+#'
+#' @examples
+#' table_fields()[1]
+table_fields <- function(){
+  list("participant_sessions"=c("participants_id,sessions_id,organizations_id,sessions_groups_id,dob,gradeLevelInSchool,numberOfServiceDays,totalDays,totalFFS,endOfSeason,calc_high_risk,pre,participantNeeds,strengths_academicGoals,strengths_activityEngagement,strengths_adultDrugUse,strengths_adultPrison,strengths_anger,strengths_arguments,strengths_behaviorProblems,strengths_bully,strengths_challenges,strengths_difficultyFocusing,strengths_drugUse,strengths_englishSecondLang,strengths_freeReducedLunch,strengths_friendsDrugs,strengths_friendships,strengths_indCompleting,strengths_juvie,strengths_learningDisability,strengths_lives,strengths_mentalHealth,strengths_physicalActivity,strengths_positiveSelfEsteem,strengths_schoolInterest,strengths_victimBullying,strengths_other,updatedDate"),
+       "participants" = c("civiCoreParticipantID,lastName,firstName,dateOfBirth,age,gender,ethnicity,numberOfAdultsInHousehold,annualFamilyIncome,highSchoolGraduate,updatedDate"),
+       "sessions" = c("sessionName,sessionStartDate,sessionType,programType,region,programLocation,mountainResort,mountainResort,sessionYear,applicationType"),
+       "university_responses" = c("participants_id,sessions_id,surveyType,enteredDate,updatedDate,calc_enteredDate,yearInSOSUniversity,location,season,grade,acadIntentI,acadIntentJ,activity,activity,activity,comEngage,comEngage,comEngage,comSkill,comSkill,comSkill,comSkill,comSkillx,control,control,control,control,control,control,control,control,decisionMak,decisionMak,decisionMak,decisionMak,decisionMak,decisionMak,decisionMak,decisionMak,diverse,diverse,diverse,diverse,diverse,diverse,diverse,diverse,diverse,diverse,diverse,drugAlc,drugAlc,drugAlc,drugAlc,drugAlc,drugAlc,drugAlc,drugAlc,drugAlc,drugAlc,drugAlc,drugAlc,eATQActivR,eATQActiv,eATQActiv,eATQAtten,eATQAttenR,eATQAtten,eATQFrust,eATQFrust,eATQFrust,eATQInhibR,eATQInhib,eATQInhibR,educationa,educationb,educationc,educationd,educatione,educationa,educationb,educationc,educationd,educatione,exper,exper,exper,exper,exper,exper,exper,exper,exper,exper,exper,exper,futureOr,futureOr,futureOr,futureOr,goalS,goalS,goalS,goalS,goalS,health,health,health,health,healthb,health,health,health,health,jSkills,jSkills,jSkills,jSkills,jSkills,jSkills,leadership,leadership,leadership,leadership,leadership,mentor,mentor,mentor,mentor,mentor,misc,misc,parents,proSoc,proSoc,proSoc,proSoc,selfEff,selfEff,selfEff,selfEff,selfEff,selfEff,selfEst,selfEst,selfEst,selfEst,selfEst,selfEst,selfEst,selfEst,selfEst,selfReg,selfReg,selfReg,selfReg,selfReg,selfReg,selfReg")
+  )
+}

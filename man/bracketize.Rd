@@ -7,7 +7,7 @@
 bracketize(x)
 }
 \arguments{
-\item{x}{a character vector of field names}
+\item{x}{a character vector (or list) of field names}
 }
 \value{
 a character vector with brackets and slahses

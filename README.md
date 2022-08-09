@@ -29,6 +29,11 @@ This is a basic example which shows you how to construct the API call:
 
 ``` r
 library(sosRus)
+# Use the table_fields function to load a list of character vectors for pulling from the API.
+table_fields <- table_fields()
+```
+
+``` r
 # Use bracketize to add brackets, slashes, and quotations for the API call
 bracketize(letters)
 #> [1] "[\"a\",\"b\",\"c\",\"d\",\"e\",\"f\",\"g\",\"h\",\"i\",\"j\",\"k\",\"l\",\"m\",\"n\",\"o\",\"p\",\"q\",\"r\",\"s\",\"t\",\"u\",\"v\",\"w\",\"x\",\"y\",\"z\"]"

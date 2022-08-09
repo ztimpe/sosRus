@@ -34,8 +34,12 @@ devtools::install_github("ztimpe/sosRus")
 
 This is a basic example which shows you how to construct the API call:
 
-```{r example}
+```{r}
 library(sosRus)
+# Use the table_fields function to load a list of character vectors for pulling from the API.
+table_fields <- table_fields()
+```
+```{r example}
 # Use bracketize to add brackets, slashes, and quotations for the API call
 bracketize(letters)
 ```

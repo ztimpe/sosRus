@@ -3,3 +3,4 @@
 export(apify)
 export(bracketize)
 export(demographics)
+export(table_fields)
