@@ -4,7 +4,7 @@
 \name{sosRus-package}
 \alias{sosRus}
 \alias{sosRus-package}
-\title{sosRus: Tools to Assist Not for Profit Analysts with Data Wrangling}
+\title{sosRus: Tools to Assist Youth-Serving Organizations with Data Wrangling}
 \description{
 \if{html}{\figure{logo.png}{options: style='float: right' alt='logo' width='120'}}
 
