@@ -86,18 +86,16 @@
 <span><span class="kw"><a href="https://rdrr.io/r/base/library.html" class="external-link">library</a></span><span class="op">(</span><span class="va"><a href="http://stringr.tidyverse.org" class="external-link">stringr</a></span><span class="op">)</span></span></code></pre></div>
 <p>sosRus includes simple calls to load character vectors of commonly used field names</p>
 <div class="sourceCode" id="cb2"><pre class="downlit sourceCode r">
-<code class="sourceCode R"><span><span class="va">demo_names</span> <span class="op">&lt;-</span> <span class="fu"><a href="../reference/demographics.html">demographics</a></span><span class="op">(</span><span class="op">)</span></span>
-<span><span class="va">demo_names</span></span>
-<span><span class="co">#&gt;  [1] "civiCoreParticipantID"     "lastName"                 </span></span>
-<span><span class="co">#&gt;  [3] "firstName"                 "dateOfBirth"              </span></span>
-<span><span class="co">#&gt;  [5] "age"                       "gender"                   </span></span>
-<span><span class="co">#&gt;  [7] "ethnicity"                 "numberOfAdultsInHousehold"</span></span>
-<span><span class="co">#&gt;  [9] "annualFamilyIncome"        "highSchoolGraduate"       </span></span>
-<span><span class="co">#&gt; [11] "updatedDate"</span></span></code></pre></div>
+<code class="sourceCode R"><span><span class="va">field_names</span> <span class="op">&lt;-</span> <span class="fu"><a href="../reference/table_fields.html">table_fields</a></span><span class="op">(</span><span class="op">)</span></span>
+<span><span class="va">field_names</span><span class="op">[</span><span class="fl">1</span><span class="op">]</span></span>
+<span><span class="co">#&gt; $participant_sessions</span></span>
+<span><span class="co">#&gt; [1] "participants_id,sessions_id,organizations_id,sessions_groups_id,dob,gradeLevelInSchool,numberOfServiceDays,totalDays,totalFFS,endOfSeason,calc_high_risk,pre,participantNeeds,strengths_academicGoals,strengths_activityEngagement,strengths_adultDrugUse,strengths_adultPrison,strengths_anger,strengths_arguments,strengths_behaviorProblems,strengths_bully,strengths_challenges,strengths_difficultyFocusing,strengths_drugUse,strengths_englishSecondLang,strengths_freeReducedLunch,strengths_friendsDrugs,strengths_friendships,strengths_indCompleting,strengths_juvie,strengths_learningDisability,strengths_lives,strengths_mentalHealth,strengths_physicalActivity,strengths_positiveSelfEsteem,strengths_schoolInterest,strengths_victimBullying,strengths_other,updatedDate"</span></span></code></pre></div>
 <p>You can “bracketize” these character vectors, which results in a vector ready to be plugged into an API call.</p>
 <div class="sourceCode" id="cb3"><pre class="downlit sourceCode r">
-<code class="sourceCode R"><span><span class="fu"><a href="../reference/bracketize.html">bracketize</a></span><span class="op">(</span><span class="va">demo_names</span><span class="op">)</span></span>
-<span><span class="co">#&gt; [1] "[\"civiCoreParticipantID\",\"lastName\",\"firstName\",\"dateOfBirth\",\"age\",\"gender\",\"ethnicity\",\"numberOfAdultsInHousehold\",\"annualFamilyIncome\",\"highSchoolGraduate\",\"updatedDate\"]"</span></span></code></pre></div>
+<code class="sourceCode R"><span><span class="fu"><a href="../reference/bracketize.html">bracketize</a></span><span class="op">(</span><span class="va">field_names</span><span class="op">[</span><span class="fl">1</span><span class="op">]</span><span class="op">)</span></span>
+<span><span class="co">#&gt; Warning in bracketize(field_names[1]): Provided list is of length greater than</span></span>
+<span><span class="co">#&gt; 1: only first bin is selected</span></span>
+<span><span class="co">#&gt; [1] "\"[\"participants_id,sessions_id,organizations_id,sessions_groups_id,dob,gradeLevelInSchool,numberOfServiceDays,totalDays,totalFFS,endOfSeason,calc_high_risk,pre,participantNeeds,strengths_academicGoals,strengths_activityEngagement,strengths_adultDrugUse,strengths_adultPrison,strengths_anger,strengths_arguments,strengths_behaviorProblems,strengths_bully,strengths_challenges,strengths_difficultyFocusing,strengths_drugUse,strengths_englishSecondLang,strengths_freeReducedLunch,strengths_friendsDrugs,strengths_friendships,strengths_indCompleting,strengths_juvie,strengths_learningDisability,strengths_lives,strengths_mentalHealth,strengths_physicalActivity,strengths_positiveSelfEsteem,strengths_schoolInterest,strengths_victimBullying,strengths_other,updatedDate\",\"]"</span></span></code></pre></div>
   </main>
 </div>
 
