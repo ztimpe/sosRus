@@ -20,11 +20,11 @@ library(stringr)
 ```
 sosRus includes simple calls to load character vectors of commonly used field names
 ```{r field_names}
-demo_names <- demographics()
-demo_names
+field_names <- table_fields()
+field_names[1]
 ```
 You can "bracketize" these character vectors, which results in a vector ready 
 to be plugged into an API call.
 ```{r}
-bracketize(demo_names)
+bracketize(field_names[1])
 ```

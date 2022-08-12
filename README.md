@@ -29,12 +29,15 @@ This is a basic example which shows you how to construct the API call:
 
 ``` r
 library(sosRus)
-# Use the table_fields function to load a list of character vectors for pulling from the API.
+# Use the table_fields function to load a list of character vectors for pulling 
+# from the API.
 table_fields <- table_fields()
 ```
 
 ``` r
 # Use bracketize to add brackets, slashes, and quotations for the API call
-bracketize(letters)
-#> [1] "[\"a\",\"b\",\"c\",\"d\",\"e\",\"f\",\"g\",\"h\",\"i\",\"j\",\"k\",\"l\",\"m\",\"n\",\"o\",\"p\",\"q\",\"r\",\"s\",\"t\",\"u\",\"v\",\"w\",\"x\",\"y\",\"z\"]"
+bracketize(table_fields()[1])
+#> Warning in bracketize(table_fields()[1]): Provided list is of length greater
+#> than 1: only first bin is selected
+#> [1] "\"[\"participants_id,sessions_id,organizations_id,sessions_groups_id,dob,gradeLevelInSchool,numberOfServiceDays,totalDays,totalFFS,endOfSeason,calc_high_risk,pre,participantNeeds,strengths_academicGoals,strengths_activityEngagement,strengths_adultDrugUse,strengths_adultPrison,strengths_anger,strengths_arguments,strengths_behaviorProblems,strengths_bully,strengths_challenges,strengths_difficultyFocusing,strengths_drugUse,strengths_englishSecondLang,strengths_freeReducedLunch,strengths_friendsDrugs,strengths_friendships,strengths_indCompleting,strengths_juvie,strengths_learningDisability,strengths_lives,strengths_mentalHealth,strengths_physicalActivity,strengths_positiveSelfEsteem,strengths_schoolInterest,strengths_victimBullying,strengths_other,updatedDate\",\"]"
 ```

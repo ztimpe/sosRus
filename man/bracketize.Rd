@@ -16,5 +16,5 @@ a character vector with brackets and slahses
 Convert character vector for API call
 }
 \examples{
-bracketize(letters)
+bracketize(letters[1:5])
 }
