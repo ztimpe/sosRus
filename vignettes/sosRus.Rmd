@@ -19,6 +19,7 @@ library(sosRus)
 library(stringr)
 ```
 sosRus includes simple calls to load character vectors of commonly used field names
+for SOS.
 ```{r field_names}
 field_names <- table_fields()
 field_names[1]

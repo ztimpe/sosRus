@@ -30,7 +30,7 @@ This is a basic example which shows you how to construct the API call:
 ``` r
 library(sosRus)
 # Use the table_fields function to load a list of character vectors for pulling 
-# from the API.
+# from the API. Check for accuracy.
 table_fields <- table_fields()
 ```
 
