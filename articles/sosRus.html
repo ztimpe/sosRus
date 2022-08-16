@@ -114,6 +114,10 @@
 <span><span class="co">#&gt; Warning in bracketize(field_names[1]): Provided list is of length greater than</span></span>
 <span><span class="co">#&gt; 1: only first bin is selected</span></span>
 <span><span class="co">#&gt; [1] "[\"participants_id\",\"sessions_id\",\"organizations_id\",\"sessions_groups_id\",\"dob\",\"gradeLevelInSchool\",\"numberOfServiceDays\",\"totalDays\",\"totalFFS\",\"endOfSeason\",\"calc_high_risk\",\"pre\",\"participantNeeds\",\"strengths_academicGoals\",\"strengths_activityEngagement\",\"strengths_adultDrugUse\",\"strengths_adultPrison\",\"strengths_anger\",\"strengths_arguments\",\"strengths_behaviorProblems\",\"strengths_bully\",\"strengths_challenges\",\"strengths_difficultyFocusing\",\"strengths_drugUse\",\"strengths_englishSecondLang\",\"strengths_freeReducedLunch\",\"strengths_friendsDrugs\",\"strengths_friendships\",\"strengths_indCompleting\",\"strengths_juvie\",\"strengths_learningDisability\",\"strengths_lives\",\"strengths_mentalHealth\",\"strengths_physicalActivity\",\"strengths_positiveSelfEsteem\",\"strengths_schoolInterest\",\"strengths_victimBullying\",\"strengths_other,updatedDate\"]"</span></span></code></pre></div>
+<p>Once your table fields have been bracketized, it is time to construct the API call so you can pull the data. This is where the apify function becomes useful.</p>
+<div class="sourceCode" id="cb4"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span><span class="fu"><a href="../reference/apify.html">apify</a></span><span class="op">(</span><span class="st">"fields"</span>,<span class="st">"table_name"</span>,<span class="st">"key"</span>,<span class="st">"base_url"</span><span class="op">)</span></span>
+<span><span class="co">#&gt; base_urltable_name?key=key&amp;fields=fields&amp;page=0</span></span></code></pre></div>
   </main>
 </div>
 
