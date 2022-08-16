@@ -29,3 +29,8 @@ to be plugged into an API call.
 ```{r}
 bracketize(field_names[1])
 ```
+Once your table fields have been bracketized, it is time to construct the API 
+call so you can pull the data. This is where the apify function becomes useful.
+```{r}
+apify("fields","table_name","key","base_url")
+```
