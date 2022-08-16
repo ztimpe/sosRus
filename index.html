@@ -94,18 +94,111 @@
 <div class="section level2">
 <h2 id="example">Example<a class="anchor" aria-label="anchor" href="#example"></a>
 </h2>
-<p>This is a basic example which shows you how to construct the API call:</p>
+<p>This is a basic example which shows you how to construct the API call. The first function, table_fields, provides a list of character vectors aligning with the fields drawn from the APIs as of August, 2022.</p>
 <div class="sourceCode" id="cb2"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="kw"><a href="https://rdrr.io/r/base/library.html" class="external-link">library</a></span><span class="op">(</span><span class="va"><a href="https://github.com/ztimpe/sosRus" class="external-link">sosRus</a></span><span class="op">)</span></span>
 <span><span class="co"># Use the table_fields function to load a list of character vectors for pulling </span></span>
 <span><span class="co"># from the API. Check for accuracy!!</span></span>
-<span><span class="va">table_fields</span> <span class="op">&lt;-</span> <span class="fu"><a href="reference/table_fields.html">table_fields</a></span><span class="op">(</span><span class="op">)</span></span></code></pre></div>
+<span><span class="va">table_fields</span> <span class="op">&lt;-</span> <span class="fu"><a href="reference/table_fields.html">table_fields</a></span><span class="op">(</span><span class="op">)</span></span>
+<span><span class="fu"><a href="https://rdrr.io/r/utils/head.html" class="external-link">head</a></span><span class="op">(</span><span class="va">table_fields</span><span class="op">)</span></span>
+<span><span class="co">#&gt; $participant_sessions</span></span>
+<span><span class="co">#&gt;  [1] "participants_id"              "sessions_id"                 </span></span>
+<span><span class="co">#&gt;  [3] "organizations_id"             "sessions_groups_id"          </span></span>
+<span><span class="co">#&gt;  [5] "dob"                          "gradeLevelInSchool"          </span></span>
+<span><span class="co">#&gt;  [7] "numberOfServiceDays"          "totalDays"                   </span></span>
+<span><span class="co">#&gt;  [9] "totalFFS"                     "endOfSeason"                 </span></span>
+<span><span class="co">#&gt; [11] "calc_high_risk"               "pre"                         </span></span>
+<span><span class="co">#&gt; [13] "participantNeeds"             "strengths_academicGoals"     </span></span>
+<span><span class="co">#&gt; [15] "strengths_activityEngagement" "strengths_adultDrugUse"      </span></span>
+<span><span class="co">#&gt; [17] "strengths_adultPrison"        "strengths_anger"             </span></span>
+<span><span class="co">#&gt; [19] "strengths_arguments"          "strengths_behaviorProblems"  </span></span>
+<span><span class="co">#&gt; [21] "strengths_bully"              "strengths_challenges"        </span></span>
+<span><span class="co">#&gt; [23] "strengths_difficultyFocusing" "strengths_drugUse"           </span></span>
+<span><span class="co">#&gt; [25] "strengths_englishSecondLang"  "strengths_freeReducedLunch"  </span></span>
+<span><span class="co">#&gt; [27] "strengths_friendsDrugs"       "strengths_friendships"       </span></span>
+<span><span class="co">#&gt; [29] "strengths_indCompleting"      "strengths_juvie"             </span></span>
+<span><span class="co">#&gt; [31] "strengths_learningDisability" "strengths_lives"             </span></span>
+<span><span class="co">#&gt; [33] "strengths_mentalHealth"       "strengths_physicalActivity"  </span></span>
+<span><span class="co">#&gt; [35] "strengths_positiveSelfEsteem" "strengths_schoolInterest"    </span></span>
+<span><span class="co">#&gt; [37] "strengths_victimBullying"     "strengths_other,updatedDate" </span></span>
+<span><span class="co">#&gt; </span></span>
+<span><span class="co">#&gt; $participants</span></span>
+<span><span class="co">#&gt;  [1] "civiCoreParticipantID"     "lastName"                 </span></span>
+<span><span class="co">#&gt;  [3] "firstName"                 "dateOfBirth"              </span></span>
+<span><span class="co">#&gt;  [5] "age"                       "gender"                   </span></span>
+<span><span class="co">#&gt;  [7] "ethnicity"                 "numberOfAdultsInHousehold"</span></span>
+<span><span class="co">#&gt;  [9] "annualFamilyIncome"        "highSchoolGraduate"       </span></span>
+<span><span class="co">#&gt; [11] "updatedDate"              </span></span>
+<span><span class="co">#&gt; </span></span>
+<span><span class="co">#&gt; $sessions</span></span>
+<span><span class="co">#&gt;  [1] "sessionName"      "sessionStartDate" "sessionType"      "programType"     </span></span>
+<span><span class="co">#&gt;  [5] "region"           "programLocation"  "mountainResort"   "mountainResort"  </span></span>
+<span><span class="co">#&gt;  [9] "sessionYear"      "applicationType" </span></span>
+<span><span class="co">#&gt; </span></span>
+<span><span class="co">#&gt; $university_responses</span></span>
+<span><span class="co">#&gt;   [1] "participants_id"     "sessions_id"         "surveyType"         </span></span>
+<span><span class="co">#&gt;   [4] "enteredDate"         "updatedDate"         "calc_enteredDate"   </span></span>
+<span><span class="co">#&gt;   [7] "yearInSOSUniversity" "location"            "season"             </span></span>
+<span><span class="co">#&gt;  [10] "grade"               "acadIntentI"         "acadIntentJ"        </span></span>
+<span><span class="co">#&gt;  [13] "activity"            "activity"            "activity"           </span></span>
+<span><span class="co">#&gt;  [16] "comEngage"           "comEngage"           "comEngage"          </span></span>
+<span><span class="co">#&gt;  [19] "comSkill"            "comSkill"            "comSkill"           </span></span>
+<span><span class="co">#&gt;  [22] "comSkill"            "comSkillx"           "control"            </span></span>
+<span><span class="co">#&gt;  [25] "control"             "control"             "control"            </span></span>
+<span><span class="co">#&gt;  [28] "control"             "control"             "control"            </span></span>
+<span><span class="co">#&gt;  [31] "control"             "decisionMak"         "decisionMak"        </span></span>
+<span><span class="co">#&gt;  [34] "decisionMak"         "decisionMak"         "decisionMak"        </span></span>
+<span><span class="co">#&gt;  [37] "decisionMak"         "decisionMak"         "decisionMak"        </span></span>
+<span><span class="co">#&gt;  [40] "diverse"             "diverse"             "diverse"            </span></span>
+<span><span class="co">#&gt;  [43] "diverse"             "diverse"             "diverse"            </span></span>
+<span><span class="co">#&gt;  [46] "diverse"             "diverse"             "diverse"            </span></span>
+<span><span class="co">#&gt;  [49] "diverse"             "diverse"             "drugAlc"            </span></span>
+<span><span class="co">#&gt;  [52] "drugAlc"             "drugAlc"             "drugAlc"            </span></span>
+<span><span class="co">#&gt;  [55] "drugAlc"             "drugAlc"             "drugAlc"            </span></span>
+<span><span class="co">#&gt;  [58] "drugAlc"             "drugAlc"             "drugAlc"            </span></span>
+<span><span class="co">#&gt;  [61] "drugAlc"             "drugAlc"             "eATQActivR"         </span></span>
+<span><span class="co">#&gt;  [64] "eATQActiv"           "eATQActiv"           "eATQAtten"          </span></span>
+<span><span class="co">#&gt;  [67] "eATQAttenR"          "eATQAtten"           "eATQFrust"          </span></span>
+<span><span class="co">#&gt;  [70] "eATQFrust"           "eATQFrust"           "eATQInhibR"         </span></span>
+<span><span class="co">#&gt;  [73] "eATQInhib"           "eATQInhibR"          "educationa"         </span></span>
+<span><span class="co">#&gt;  [76] "educationb"          "educationc"          "educationd"         </span></span>
+<span><span class="co">#&gt;  [79] "educatione"          "exper"               "exper"              </span></span>
+<span><span class="co">#&gt;  [82] "exper"               "exper"               "exper"              </span></span>
+<span><span class="co">#&gt;  [85] "exper"               "exper"               "exper"              </span></span>
+<span><span class="co">#&gt;  [88] "exper"               "exper"               "exper"              </span></span>
+<span><span class="co">#&gt;  [91] "exper"               "futureOr"            "futureOr"           </span></span>
+<span><span class="co">#&gt;  [94] "futureOr"            "futureOr"            "goalS"              </span></span>
+<span><span class="co">#&gt;  [97] "goalS"               "goalS"               "goalS"              </span></span>
+<span><span class="co">#&gt; [100] "goalS"               "health"              "health"             </span></span>
+<span><span class="co">#&gt; [103] "health"              "health"              "healthb"            </span></span>
+<span><span class="co">#&gt; [106] "health"              "health"              "health"             </span></span>
+<span><span class="co">#&gt; [109] "health"              "jSkills"             "jSkills"            </span></span>
+<span><span class="co">#&gt; [112] "jSkills"             "jSkills"             "jSkills"            </span></span>
+<span><span class="co">#&gt; [115] "jSkills"             "leadership"          "leadership"         </span></span>
+<span><span class="co">#&gt; [118] "leadership"          "leadership"          "leadership"         </span></span>
+<span><span class="co">#&gt; [121] "mentor"              "mentor"              "mentor"             </span></span>
+<span><span class="co">#&gt; [124] "mentor"              "mentor"              "misc"               </span></span>
+<span><span class="co">#&gt; [127] "parents"             "proSoc"              "proSoc"             </span></span>
+<span><span class="co">#&gt; [130] "proSoc"              "proSoc"              "selfEff"            </span></span>
+<span><span class="co">#&gt; [133] "selfEff"             "selfEff"             "selfEff"            </span></span>
+<span><span class="co">#&gt; [136] "selfEff"             "selfEff"             "selfEst"            </span></span>
+<span><span class="co">#&gt; [139] "selfEst"             "selfEst"             "selfEst"            </span></span>
+<span><span class="co">#&gt; [142] "selfEst"             "selfEst"             "selfEst"            </span></span>
+<span><span class="co">#&gt; [145] "selfEst"             "selfEst"             "selfReg"            </span></span>
+<span><span class="co">#&gt; [148] "selfReg"             "selfReg"             "selfReg"            </span></span>
+<span><span class="co">#&gt; [151] "selfReg"             "selfReg"             "selfReg"</span></span></code></pre></div>
+<p>When viewing this list, it will become apparent that the character vectors are simply the field names, and are not ready to be plugged into the API call. To prepare these vectors for the API call, use the bracketize function. This function takes a character vector or list of character vectors and places brackets at the beginning and end, as well as forward slashes and commas. The output of this function should mirror the field name expression in the API call.</p>
 <div class="sourceCode" id="cb3"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="co"># Use bracketize to add brackets, slashes, and quotations for the API call</span></span>
-<span><span class="fu"><a href="reference/bracketize.html">bracketize</a></span><span class="op">(</span><span class="fu"><a href="reference/table_fields.html">table_fields</a></span><span class="op">(</span><span class="op">)</span><span class="op">[</span><span class="fl">1</span><span class="op">]</span><span class="op">)</span></span>
+<span><span class="fu"><a href="https://rdrr.io/r/utils/head.html" class="external-link">head</a></span><span class="op">(</span><span class="fu"><a href="reference/bracketize.html">bracketize</a></span><span class="op">(</span><span class="fu"><a href="reference/table_fields.html">table_fields</a></span><span class="op">(</span><span class="op">)</span><span class="op">[</span><span class="fl">1</span><span class="op">]</span><span class="op">)</span><span class="op">)</span></span>
 <span><span class="co">#&gt; Warning in bracketize(table_fields()[1]): Provided list is of length greater</span></span>
 <span><span class="co">#&gt; than 1: only first bin is selected</span></span>
 <span><span class="co">#&gt; [1] "[\"participants_id\",\"sessions_id\",\"organizations_id\",\"sessions_groups_id\",\"dob\",\"gradeLevelInSchool\",\"numberOfServiceDays\",\"totalDays\",\"totalFFS\",\"endOfSeason\",\"calc_high_risk\",\"pre\",\"participantNeeds\",\"strengths_academicGoals\",\"strengths_activityEngagement\",\"strengths_adultDrugUse\",\"strengths_adultPrison\",\"strengths_anger\",\"strengths_arguments\",\"strengths_behaviorProblems\",\"strengths_bully\",\"strengths_challenges\",\"strengths_difficultyFocusing\",\"strengths_drugUse\",\"strengths_englishSecondLang\",\"strengths_freeReducedLunch\",\"strengths_friendsDrugs\",\"strengths_friendships\",\"strengths_indCompleting\",\"strengths_juvie\",\"strengths_learningDisability\",\"strengths_lives\",\"strengths_mentalHealth\",\"strengths_physicalActivity\",\"strengths_positiveSelfEsteem\",\"strengths_schoolInterest\",\"strengths_victimBullying\",\"strengths_other,updatedDate\"]"</span></span></code></pre></div>
+<p>Once the table fields have been bracketized, it is time to place them in the API call, using the apify function. This function already has the base URL set as the default, but you will need to specify the table name you will pull from, the fields (after being bracketized), the key, and page. To this point, nothing should be different from the classical API calls that are used for pulling SOS data.</p>
+<div class="sourceCode" id="cb4"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span><span class="co"># Use apify to create an API call address. </span></span>
+<span><span class="fu"><a href="reference/apify.html">apify</a></span><span class="op">(</span><span class="st">"fields"</span>,<span class="st">"table_name"</span>,<span class="st">"key"</span>,<span class="st">"base_url"</span><span class="op">)</span></span>
+<span><span class="co">#&gt; base_urltable_name?key=key&amp;fields=fields&amp;page=0</span></span></code></pre></div>
 </div>
 </div>
   </main><aside class="col-md-3"><div class="links">
