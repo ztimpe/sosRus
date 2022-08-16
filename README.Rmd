@@ -35,7 +35,6 @@ devtools::install_github("ztimpe/sosRus")
 This is a basic example which shows you how to construct the API call. The first
 function, table_fields, provides a list of character vectors aligning with the
 fields drawn from the APIs as of August, 2022. 
-
 ```{r}
 library(sosRus)
 # Use the table_fields function to load a list of character vectors for pulling 
@@ -62,3 +61,4 @@ be different from the classical API calls that are used for pulling SOS data.
 # Use apify to create an API call address. 
 apify("fields","table_name","key","base_url")
 ```
+
