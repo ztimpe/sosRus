@@ -40,7 +40,7 @@ library(sosRus)
 # Use the table_fields function to load a list of character vectors for pulling 
 # from the API. Check for accuracy!!
 table_fields <- table_fields()
-head(table_fields)
+head(table_fields)[1]
 ```
 When viewing this list, it will become apparent that the character vectors are 
 simply the field names, and are not ready to be plugged into the API call. To 
@@ -50,7 +50,7 @@ beginning and end, as well as forward slashes and commas. The output of this
 function should mirror the field name expression in the API call.
 ```{r example}
 # Use bracketize to add brackets, slashes, and quotations for the API call
-head(bracketize(table_fields()[1]))
+bracketize(table_fields()[1])
 ```
 Once the table fields have been bracketized, it is time to place them in the API
 call, using the apify function. This function already has the base URL set as the 
