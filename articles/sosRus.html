@@ -88,13 +88,13 @@
 <div class="sourceCode" id="cb2"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="va">field_names</span> <span class="op">&lt;-</span> <span class="fu"><a href="../reference/table_fields.html">table_fields</a></span><span class="op">(</span><span class="op">)</span></span>
 <span><span class="va">field_names</span><span class="op">[</span><span class="fl">1</span><span class="op">]</span></span>
-<span><span class="co">#&gt; $participant_sessions</span></span>
+<span><span class="co">#&gt; $participants_sessions</span></span>
 <span><span class="co">#&gt;  [1] "participants_id"              "sessions_id"                 </span></span>
 <span><span class="co">#&gt;  [3] "organizations_id"             "sessions_groups_id"          </span></span>
 <span><span class="co">#&gt;  [5] "dob"                          "gradeLevelInSchool"          </span></span>
 <span><span class="co">#&gt;  [7] "numberOfServiceDays"          "totalDays"                   </span></span>
 <span><span class="co">#&gt;  [9] "totalFFS"                     "endOfSeason"                 </span></span>
-<span><span class="co">#&gt; [11] "calc_high_risk"               "pre"                         </span></span>
+<span><span class="co">#&gt; [11] "calc_high_risk"               "pre19"                       </span></span>
 <span><span class="co">#&gt; [13] "participantNeeds"             "strengths_academicGoals"     </span></span>
 <span><span class="co">#&gt; [15] "strengths_activityEngagement" "strengths_adultDrugUse"      </span></span>
 <span><span class="co">#&gt; [17] "strengths_adultPrison"        "strengths_anger"             </span></span>
@@ -107,13 +107,14 @@
 <span><span class="co">#&gt; [31] "strengths_learningDisability" "strengths_lives"             </span></span>
 <span><span class="co">#&gt; [33] "strengths_mentalHealth"       "strengths_physicalActivity"  </span></span>
 <span><span class="co">#&gt; [35] "strengths_positiveSelfEsteem" "strengths_schoolInterest"    </span></span>
-<span><span class="co">#&gt; [37] "strengths_victimBullying"     "strengths_other,updatedDate"</span></span></code></pre></div>
+<span><span class="co">#&gt; [37] "strengths_victimBullying"     "strengths_other"             </span></span>
+<span><span class="co">#&gt; [39] "updatedDate"</span></span></code></pre></div>
 <p>You can “bracketize” these character vectors, which results in a vector ready to be plugged into an API call.</p>
 <div class="sourceCode" id="cb3"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="fu"><a href="../reference/bracketize.html">bracketize</a></span><span class="op">(</span><span class="va">field_names</span><span class="op">[</span><span class="fl">1</span><span class="op">]</span><span class="op">)</span></span>
 <span><span class="co">#&gt; Warning in bracketize(field_names[1]): Provided list is of length greater than</span></span>
 <span><span class="co">#&gt; 1: only first bin is selected</span></span>
-<span><span class="co">#&gt; [1] "[\\\"participants_id\\\",\\\"sessions_id\\\",\\\"organizations_id\\\",\\\"sessions_groups_id\\\",\\\"dob\\\",\\\"gradeLevelInSchool\\\",\\\"numberOfServiceDays\\\",\\\"totalDays\\\",\\\"totalFFS\\\",\\\"endOfSeason\\\",\\\"calc_high_risk\\\",\\\"pre\\\",\\\"participantNeeds\\\",\\\"strengths_academicGoals\\\",\\\"strengths_activityEngagement\\\",\\\"strengths_adultDrugUse\\\",\\\"strengths_adultPrison\\\",\\\"strengths_anger\\\",\\\"strengths_arguments\\\",\\\"strengths_behaviorProblems\\\",\\\"strengths_bully\\\",\\\"strengths_challenges\\\",\\\"strengths_difficultyFocusing\\\",\\\"strengths_drugUse\\\",\\\"strengths_englishSecondLang\\\",\\\"strengths_freeReducedLunch\\\",\\\"strengths_friendsDrugs\\\",\\\"strengths_friendships\\\",\\\"strengths_indCompleting\\\",\\\"strengths_juvie\\\",\\\"strengths_learningDisability\\\",\\\"strengths_lives\\\",\\\"strengths_mentalHealth\\\",\\\"strengths_physicalActivity\\\",\\\"strengths_positiveSelfEsteem\\\",\\\"strengths_schoolInterest\\\",\\\"strengths_victimBullying\\\",\\\"strengths_other,updatedDate\\\"]"</span></span></code></pre></div>
+<span><span class="co">#&gt; [1] "[\"participants_id\",\"sessions_id\",\"organizations_id\",\"sessions_groups_id\",\"dob\",\"gradeLevelInSchool\",\"numberOfServiceDays\",\"totalDays\",\"totalFFS\",\"endOfSeason\",\"calc_high_risk\",\"pre19\",\"participantNeeds\",\"strengths_academicGoals\",\"strengths_activityEngagement\",\"strengths_adultDrugUse\",\"strengths_adultPrison\",\"strengths_anger\",\"strengths_arguments\",\"strengths_behaviorProblems\",\"strengths_bully\",\"strengths_challenges\",\"strengths_difficultyFocusing\",\"strengths_drugUse\",\"strengths_englishSecondLang\",\"strengths_freeReducedLunch\",\"strengths_friendsDrugs\",\"strengths_friendships\",\"strengths_indCompleting\",\"strengths_juvie\",\"strengths_learningDisability\",\"strengths_lives\",\"strengths_mentalHealth\",\"strengths_physicalActivity\",\"strengths_positiveSelfEsteem\",\"strengths_schoolInterest\",\"strengths_victimBullying\",\"strengths_other\",\"updatedDate\"]"</span></span></code></pre></div>
 <p>Once your table fields have been bracketized, it is time to construct the API call so you can pull the data. This is where the apify function becomes useful.</p>
 <div class="sourceCode" id="cb4"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="fu"><a href="../reference/apify.html">apify</a></span><span class="op">(</span><span class="st">"fields"</span>,<span class="st">"table_name"</span>,<span class="st">"key"</span>,<span class="st">"base_url"</span><span class="op">)</span></span>
