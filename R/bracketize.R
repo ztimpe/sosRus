@@ -21,11 +21,11 @@ bracketize <- function(x){
   else{
     x <- x
   }
-  x[1] <- paste('[\\\"',x[1],'\\\",',sep="")
-  x[length(x)] <- paste('\\\"',x[length(x)],'\\\"]',sep="")
+  x[1] <- paste('[\"',x[1],'\",',sep="")
+  x[length(x)] <- paste('\"',x[length(x)],'\"]',sep="")
   if(length(x)>2){
     for(i in 2: (length(x)-1)){
-      x[i] <- paste('\\\"',x[i],'\\\",',sep="")
+      x[i] <- paste('\"',x[i],'\",',sep="")
     }
   }
   stringr::str_c(x,collapse="")
