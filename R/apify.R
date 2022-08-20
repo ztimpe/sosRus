@@ -17,9 +17,9 @@ apify <- function(fields,
                   base_url="https://api.civicore.com/newsos/api/v3/data/",
                   page=0){
     if(page == 0){
-      glue::glue("{ base_url }{ table_name }?key={ key }&fields={ fields }&page=0")
+      glue::glue("{ base_url }{ table_name }?key={ key }&fields={ fields }")
     }
     else{
-      glue::glue("{ url_root }{ table_name }?key={ key }&fields={ fields }&page={ page }")
+      glue::glue("{ base_url }{ table_name }?key={ key }&fields={ fields }&page={ page }")
     }
 }
