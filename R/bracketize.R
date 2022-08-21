@@ -2,7 +2,7 @@
 #'
 #' @param x a character vector (or list) of field names
 #'
-#' @return a character vector with brackets and slahses
+#' @return a character vector with brackets and slashes
 #' @export
 #'
 #' @examples

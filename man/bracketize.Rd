@@ -10,7 +10,7 @@ bracketize(x)
 \item{x}{a character vector (or list) of field names}
 }
 \value{
-a character vector with brackets and slahses
+a character vector with brackets and slashes
 }
 \description{
 Convert character vector for API call
